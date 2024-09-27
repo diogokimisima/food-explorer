@@ -2,13 +2,13 @@ import Logo from '../assets/explorer.svg'
 
 export function SignIn() {
     return (
-        <div className="bg-gray-950 h-lvh flex flex-row justify-center items-center px-28">
+        <div className="bg-dark-400 h-lvh flex flex-row justify-center items-center px-28">
             <div className="flex-1 flex justify-center items-center gap-4">
                 <img src={Logo} alt="Food Explorer Logo" />
                     <h1 className="text-5xl">Food Explorer</h1>
             </div>
 
-            <div className="bg-[#001119] w-[476px] h-[504px] flex flex-col justify-center items-center gap-8 rounded-md">
+            <div className="bg-dark-700 w-[476px] h-[504px] flex flex-col justify-center items-center gap-8 rounded-md">
                 <h2 className="text-4xl">Faça Login</h2>
                 <form method="post" className="w-full px-16 flex flex-col items-center gap-3">
                     <div className="flex flex-col w-full gap-2">
