@@ -1,11 +1,15 @@
-// import { SignIn } from "./components/SignIn";
-import { SignUp } from "./components/SignUp";
+// import { SignUp } from "./components/sign-up";
+import { Header } from "./components/header";
+// import { Home } from "./components/home";
+// import { SignIn } from "./components/sign-in";
 
 
 export function App() {
   return (
       <div>
-         <SignUp />
+         <Header />
+
+         {/* <Home /> */}
       </div>
   )
 }

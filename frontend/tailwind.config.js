@@ -6,6 +6,13 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], 
+        roboto: ['Roboto', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-100': 'linear-gradient(to bottom, #091E26 0%, #00131C 100%)',
+      },
       colors: {
         dark: {
           100: '#000405',
@@ -43,7 +50,7 @@ export default {
         cake: {
           100: '#065E7C',
           200: '#82F3FF',
-        }
+        },
       }
     },
   },
