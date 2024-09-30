@@ -1,8 +1,8 @@
 // import { SignUp } from "./components/sign-up";
 // import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { UpdateProduct } from "./components/update-product";
-// import { NewProduct } from "./components/new-product";
+// import { UpdateProduct } from "./components/update-product";
+import { NewProduct } from "./components/new-product";
 // import { Home } from "./components/home";
 // import { SignIn } from "./components/sign-in";
 
@@ -12,9 +12,9 @@ export function App() {
     <div>
       <Header />
 
-      <UpdateProduct/>
+        {/* <UpdateProduct/> */}
         {/* <Home /> */}
-        {/* <NewProduct /> */}
+        <NewProduct />
         {/* <Footer /> */}
       </div>
   )
