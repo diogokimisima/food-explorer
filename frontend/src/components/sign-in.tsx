@@ -17,15 +17,15 @@ export function SignIn() {
     };
 
     return (
-        <div className="h-lvh flex flex-col lg:flex-row justify-center items-center gap-x-48 mx-auto">
-            <div className="flex justify-center items-center gap-4">
+        <div className="h-lvh flex justify-center lg:flex-row flex-col items-center mx-10 md:mx-28 gap-y-10">
+            <div className="flex justify-center items-center gap-4 w-1/2">
                 <img src={Logo} alt="Food Explorer Logo" />
-                <h1 className="text-4xl lg:text-[42px] font-bold text-light-100">Food Explorer</h1>
+                <h1 className="lg:text-[42px] text-[35px] font-bold text-light-100 text-nowrap">Food Explorer</h1>
             </div>
 
-            <div className="bg-transparent lg:bg-dark-700 w-auto h-auto lg:w-[476px] lg:h-[504px] flex flex-col justify-center items-center gap-8 rounded-xl px-4">
-                <h2 className="text-[32px] font-poppins">Faça Login</h2>
-                <form method="post" className="w-full lg:px-16 flex flex-col items-center">
+            <div className="lg:bg-dark-700 w-full h-auto lg:w-[476px] lg:h-[504px] flex flex-col justify-center items-center gap-8 rounded-xl">
+                <h2 className="text-[32px] font-poppins hidden lg:block">Faça Login</h2>
+                <form method="post" className="w-full lg:px-16 flex flex-col items-center gap-2">
                     <div className="flex flex-col w-full gap-2">
                         <label className='text-light-400'>Email</label>
                         <input className="bg-dark-900 w-30 lg:w-full rounded-md p-3 border-dark-900 focus:border-light-100" type="text" name="username" placeholder='Exemplo: exemplo@exemplo.com.br' required /><br />
@@ -46,7 +46,7 @@ export function SignIn() {
                         </div>
                     </div>
                     <button className="bg-tomato-100 hover:bg-tomato-200 text-light-100 w-full py-3 rounded-md transition duration-200 ease-in-out" type="submit">Entrar</button>
-                    <a href="" className="mt-4">Criar uma conta</a>
+                    <a href="" className="mt-8">Criar uma conta</a>
                 </form>
             </div>
         </div>

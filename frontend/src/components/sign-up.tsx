@@ -18,15 +18,15 @@ export function SignUp() {
 
 
     return (
-        <div className="h-lvh flex flex-row justify-center items-center gap-48">
-            <div className="flex justify-center items-center gap-4">
+        <div className="h-lvh flex justify-center lg:flex-row flex-col items-center mx-10 md:mx-28 gap-y-10">
+            <div className="flex justify-center items-center gap-4 w-1/2">
                 <img src={Logo} alt="Food Explorer Logo" />
-                <h1 className="text-[42px] font-bold text-light-100">Food Explorer</h1>
+                <h1 className="lg:text-[42px] text-[35px] font-bold text-light-100 text-nowrap">Food Explorer</h1>
             </div>
 
-            <div className="bg-dark-700 w-[476px] h-[604px] flex flex-col justify-center items-center gap-8 rounded-xl">
-                <h2 className="text-[32px] font-poppins">Crie sua conta</h2>
-                <form method="post" className="w-full px-16 flex flex-col items-center">
+            <div className="lg:bg-dark-700 w-full h-auto lg:w-[476px] lg:h-[564px] flex flex-col justify-center items-center gap-8 rounded-xl">
+                <h2 className="text-[32px] font-poppins hidden lg:block">Crie sua conta</h2>
+                <form method="post" className="w-full lg:px-16 flex flex-col items-center">
                     <div className="flex flex-col w-full gap-2">
                         <label className='text-light-400'>Seu nome</label>
                         <input className="bg-dark-900 rounded-md p-3 border-dark-900 focus:border-light-100" type="text" name="username" placeholder='Exemplo: Maria da Silva' required /><br />

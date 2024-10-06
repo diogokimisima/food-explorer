@@ -4,8 +4,8 @@
 // import { UpdateProduct } from "./components/update-product";
 // import { NewProduct } from "./components/new-product";
 // import { Home } from "./components/home";
-// import { SignIn } from "./components/sign-in";
-import { SignUp } from "./components/sign-up";
+import { SignIn } from "./components/sign-in";
+// import { SignUp } from "./components/sign-up";
 
 
 export function App() {
@@ -14,8 +14,8 @@ export function App() {
       {/* <Header /> */}
 
         {/* <UpdateProduct/> */}
-        <SignUp />
-        {/* <SignIn/> */}
+        {/* <SignUp /> */}
+        <SignIn/>
         {/* <Home /> */}
         {/* <NewProduct /> */}
         {/* <Footer /> */}
