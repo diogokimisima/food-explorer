@@ -5,15 +5,15 @@ import Logout from '../assets/logout.svg'
 
 export function Header() {
     return (
-        <header className='bg-dark-600 h-[104px] flex justify-center items-center gap-8 w-full fixed top-0 z-50'>
-            <div className='flex items-center gap-8'>
+        <header className='bg-dark-600 h-[104px] px-32 flex justify-center items-center gap-8 w-full fixed top-0 z-50'>
+            <div className='flex items-center gap-8 flex-1'>
                 <div className='flex items-center'>
                     <img className='h-8 w-8 mr-3' src={Logo} alt="logo" />
-                    <h1 className='text-light-100 text-2xl font-bold'>Food Explorer</h1>
+                    <h1 className='text-light-100 text-2xl font-bold text-nowrap'>Food Explorer</h1>
                 </div>
-                <div className='flex bg-dark-900 py-3 px-20 rounded-md gap-2'>
+                <div className='flex-1 flex bg-dark-900 py-3 px-4 min-w-[200px] rounded-md gap-2'>
                     <img className='text-light-400' src={Search} alt="" />
-                    <input className='placeholder:text-light-500 bg-dark-900 w-80 focus:outline-none' type="text" placeholder='Busque por pratos ou ingredientes' />
+                    <input className='placeholder:text-light-500 bg-dark-900 focus:outline-none w-full' type="text" placeholder='Busque por pratos ou ingredientes' />
                 </div>
             </div>
 

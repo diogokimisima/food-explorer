@@ -23,7 +23,7 @@ export function Home() {
                 </div>
             </div>
 
-            <div className='flex flex-col justify-center items-center mx-auto mt-16 mb-10'> {/* !!!! */}
+            <div className='flex flex-col justify-center items-center mx-auto mt-16'>
                 <div>
                     <h3 className='text-light-300 font-poppins text-3xl'>Refeições</h3>
                 </div>
