@@ -12,14 +12,14 @@ export function Home() {
 
     return (
         <div>
-            <div className='bg-gradient-100 h-[260px] w-[1120px] flex justify-center mx-auto relative mt-[280px] rounded-lg '>
-                <div className='absolute -left-12 -top-[146px]'>
-                    <img src={Banner} alt="banner" />
+            <div className='bg-gradient-100 h-32 w-96 lg:h-[260px] lg:w-[1120px] flex justify-center mx-auto relative mt-[280px] rounded-lg '>
+                <div className='absolute -left-12 -top-[20px] lg:-top-[154px]'>
+                    <img className='w-48 h-36 lg:h-[412px] lg:w-[656px]' src={Banner} alt="banner" />
                 </div>
 
                 <div className='flex flex-col justify-center items-center gap-2 w-1/2 ml-auto'>
-                    <h2 className='text-light-300 text-[40px] font-medium font-poppins '>Sabores inigualáveis</h2>
-                    <p className='text-light-300 text-base'>Sinta o cuidado do preparo com ingredientes selecionados</p>
+                    <h2 className='text-light-300 text-[18px] lg:text-[40px] font-medium font-poppins '>Sabores inigualáveis</h2>
+                    <p className='text-light-300  text-[12px] lg:text-base'>Sinta o cuidado do preparo com ingredientes selecionados</p>
                 </div>
             </div>
 
