@@ -2,8 +2,8 @@
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 // import { UpdateProduct } from "./components/update-product";
-// import { NewProduct } from "./components/new-product";
-import { Home } from "./components/home";
+import { NewProduct } from "./components/new-product";
+// import { Home } from "./components/home";
 // import { SignIn } from "./components/sign-in";
 // import { SignUp } from "./components/sign-up";
 
@@ -16,8 +16,8 @@ export function App() {
       {/* <UpdateProduct/> */}
       {/* <SignUp /> */}
       {/* <SignIn/> */}
-      <Home />
-      {/* <NewProduct /> */}
+      {/* <Home /> */}
+      <NewProduct />
       <Footer />
     </div>
   )
