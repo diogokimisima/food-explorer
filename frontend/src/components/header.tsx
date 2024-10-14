@@ -32,9 +32,12 @@ export function Header() {
                     </div>
                 </div>
 
-                <a href='' className='lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md hover:bg-tomato-200 transition duration-200 ease-in-out'>
+                <a href='' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200 transition duration-200 ease-in-out'>
                     <img className='text-light-100' src={Pedido} alt="logo-pedido" />
                     <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
+                    <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>
+                        <span>1</span>
+                    </div>
                 </a>
 
                 <button className='hidden lg:block'>
@@ -45,7 +48,7 @@ export function Header() {
 
 
             {isModalOpen && (
-                <div className="fixed inset-0 transform transition-transform duration-300 ease-in-out translate-x-0 z-50">
+                <div className="fixed inset-0 transform transition-transform duration-300 ease-in-out translate-x-0 z-50 bg-dark-400">
                     <div className=''>
                         <div className="h-[85px] bg-dark-600 flex items-center p-6 gap-4">
                             <button onClick={toggleModal}>

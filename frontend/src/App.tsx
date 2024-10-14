@@ -1,5 +1,5 @@
 // import { SignUp } from "./components/sign-up";
-// import { Footer } from "./components/footer";
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 // import { UpdateProduct } from "./components/update-product";
 // import { NewProduct } from "./components/new-product";
@@ -18,7 +18,7 @@ export function App() {
       {/* <SignIn/> */}
       <Home />
       {/* <NewProduct /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }
