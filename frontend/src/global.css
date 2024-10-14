@@ -29,21 +29,3 @@ body, input, textarea, button {
 *:hover {
     transition: all 0.2s ease;
 }
-
-.modal-enter {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .modal-enter-active {
-    transform: translateX(0);
-  }
-  
-  .modal-exit {
-    transform: translateX(0);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .modal-exit-active {
-    transform: translateX(-100%);
-  }

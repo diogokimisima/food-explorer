@@ -2,6 +2,7 @@ import Back from '../assets/back.svg'
 import Download from '../assets/download.svg'
 import X from '../assets/x.svg'
 import Plus from '../assets/plus2.svg'
+import arrowDown from '../assets/arrow-down.svg'
 
 export function NewProduct() {
     return (
@@ -28,15 +29,16 @@ export function NewProduct() {
 
                         <div className='flex flex-col gap-4 w-full px-8 lg:px-0'>
                             <h2 className='text-light-400'>Nome</h2>
-                            <div className='flex gap-2 bg-dark-800 py-3 px-8 rounded-lg w-full'>
+                            <div className='flex gap-2 bg-dark-800 py-3 px-4 rounded-lg w-full'>
                                 <input className='font-poppins bg-dark-800 focus:outline-none ' type="text" placeholder='Ex.: Salada Ceasar' />
                             </div>
                         </div>
 
                         <div className='flex flex-col gap-4 w-full px-8 lg:px-0'>
                             <h2 className='text-light-400'>Categoria</h2>
-                            <div className='flex gap-2 bg-dark-800 py-3 px-8 rounded-lg w-full'>
+                            <div className='flex gap-2 bg-dark-800 py-3 px-4 rounded-lg w-full'>
                                 <input className='font-poppins bg-dark-800 focus:outline-none' type="text" placeholder='Refeição' />
+                                <img className='ml-auto' src={arrowDown} alt="arrow down" />
                             </div>
                         </div>
                     </div>
@@ -59,7 +61,7 @@ export function NewProduct() {
 
                         <div className='flex flex-col gap-4 ml-auto w-full px-8 lg:px-0'>
                             <h2 className='text-light-400'>Preço</h2>
-                            <div className='flex gap-2 bg-dark-800 py-3 px-8 rounded-lg w-full'>
+                            <div className='flex gap-2 bg-dark-800 py-3 px-4 rounded-lg w-full'>
                                 <input className='font-poppins bg-dark-800 focus:outline-none ' type="text" placeholder='R$ 00,00' />
                             </div>
                         </div>
@@ -69,7 +71,7 @@ export function NewProduct() {
                         <h2 className='text-light-400'>Descrição</h2>
                         <div className='flex flex-col gap-4 bg-dark-800 w-full rounded-lg h-44 mt-5'>
                             <textarea
-                                className='font-poppins bg-dark-800 focus:outline-none w-full h-full py-3 px-8 resize-none rounded-lg'
+                                className='font-poppins bg-dark-800 focus:outline-none w-full h-full py-3 px-4 resize-none rounded-lg'
                                 placeholder='Fale brevemente sobre o prato, seus ingredientes e composição'>
                             </textarea>
                         </div>
