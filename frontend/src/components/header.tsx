@@ -1,29 +1,35 @@
-import Logo from '../assets/explorer.svg'
-import Search from '../assets/search.svg'
-import Pedido from '../assets/pedido.svg'
-import Logout from '../assets/logout.svg'
-import Menu from '../assets/menu.svg'
-import X from '../assets/x.svg'
-import { useState } from 'react'
+import Logo from '../assets/explorer.svg';
+import Search from '../assets/search.svg';
+import Pedido from '../assets/pedido.svg';
+import Logout from '../assets/logout.svg';
+import Menu from '../assets/menu.svg';
+import X from '../assets/x.svg';
+import { useState } from 'react';
 
 export function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAnimating, setIsAnimating] = useState(false); 
 
     const toggleModal = () => {
-        setIsModalOpen(!isModalOpen);
+        if (isModalOpen) {
+            setIsAnimating(false);
+            setTimeout(() => setIsModalOpen(false), 300);
+        } else {
+            setIsModalOpen(true); 
+            setTimeout(() => setIsAnimating(true), 10);
+        }
     };
 
     return (
         <>
             <header className='bg-dark-600 h-[85px] lg:h-[104px] lg:px-32 px-6 flex justify-center items-center gap-8 w-full fixed top-0 z-30'>
-
                 <div className='md:hidden flex items-center gap-8' onClick={toggleModal}>
                     <img src={Menu} alt="Menu icon" />
                 </div>
 
                 <div className='flex justify-center items-center gap-8 flex-1'>
                     <div className='flex items-center'>
-                        <img className='h-6 w-6  lg:h-8 lg:w-8 mr-3' src={Logo} alt="logo" />
+                        <img className='h-6 w-6 lg:h-8 lg:w-8 mr-3' src={Logo} alt="logo" />
                         <h1 className='text-light-100 text-xl lg:text-2xl font-bold text-nowrap'>Food Explorer</h1>
                     </div>
                     <div className='hidden flex-1 md:flex bg-dark-900 py-3 px-4 min-w-[200px] rounded-md gap-2'>
@@ -45,11 +51,11 @@ export function Header() {
                 </button>
             </header>
 
-
-
             {isModalOpen && (
-                <div className="fixed inset-0 transform transition-transform duration-300 ease-in-out translate-x-0 z-50 bg-dark-400">
-                    <div className=''>
+                <div
+                    className={`fixed inset-0 z-50 bg-dark-400 transform transition-transform duration-300 ease-in-out ${isAnimating ? 'translate-x-0' : '-translate-x-full'}`}
+                >
+                    <div>
                         <div className="h-[85px] bg-dark-600 flex items-center p-6 gap-4">
                             <button onClick={toggleModal}>
                                 <img className='w-[18px]' src={X} alt="icon x" />
@@ -69,5 +75,5 @@ export function Header() {
                 </div>
             )}
         </>
-    )
+    );
 }
