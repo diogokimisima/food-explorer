@@ -32,7 +32,7 @@ export function Header() {
                     </div>
                 </div>
 
-                <a href='' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200 transition duration-200 ease-in-out'>
+                <a href='' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200'>
                     <img className='text-light-100' src={Pedido} alt="logo-pedido" />
                     <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
                     <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>

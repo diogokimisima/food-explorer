@@ -38,7 +38,7 @@ export function Home() {
                             <p className='font-bold text-base sm:text-[20px]'>01</p>
                             <button><img className='sm:w-6 w-[18px]' src={Plus} alt="icon plus" /></button>
                         </div>
-                        <div className='bg-tomato-100 hover:bg-tomato-200 flex items-center justify-center w-full transition duration-200 ease-in-out rounded-md px-4 py-1 sm:py-3 sm:px-6'>
+                        <div className='bg-tomato-100 hover:bg-tomato-200 flex items-center justify-center w-full rounded-md px-4 py-1 sm:py-3 sm:px-6'>
                             <button className='text-base sm:text-xl'>Incluir</button>
                         </div>
                         <button

@@ -54,7 +54,7 @@ export function SignUp() {
                             </button>
                         </div>
                     </div>
-                    <button className="bg-tomato-100 hover:bg-tomato-200 text-light-100 w-full py-3 rounded-md transition duration-200 ease-in-out" type="submit">Criar Conta</button>
+                    <button className="bg-tomato-100 hover:bg-tomato-200 text-light-100 w-full py-3 rounded-md" type="submit">Criar Conta</button>
                     <a href="{% url 'register' %}" className="mt-4">Já tenho uma conta</a>
                 </form>
             </div>
