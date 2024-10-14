@@ -46,7 +46,7 @@ export function SignIn() {
                         </div>
                     </div>
                     <button className="bg-tomato-100 hover:bg-tomato-200 text-light-100 w-full py-3 rounded-md" type="submit">Entrar</button>
-                    <a href="" className="mt-8">Criar uma conta</a>
+                    <a href="/signup" className="mt-8">Criar uma conta</a>
                 </form>
             </div>
         </div>

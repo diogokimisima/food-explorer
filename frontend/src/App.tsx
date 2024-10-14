@@ -1,26 +1,15 @@
-// import { SignUp } from "./components/sign-up";
+import { Outlet } from "react-router-dom";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
-import { UpdateProduct } from "./components/update-product";
-import { NewProduct } from "./components/new-product";
-import { ShowProduct } from "./components/show-product";
-// import { Home } from "./components/home";
-// import { SignIn } from "./components/sign-in";
-// import { SignUp } from "./components/sign-up";
-
 
 export function App() {
   return (
     <div>
       <Header />
-
-      {/* <ShowProduct /> */}
-      {/* <UpdateProduct/> */}
-      {/* <SignUp /> */}
-      {/* <SignIn/> */}
-      {/* <Home /> */}
-      <NewProduct />
+      <main>
+        <Outlet /> {/* Conteúdo dinâmico das rotas será renderizado aqui */}
+      </main>
       <Footer />
     </div>
-  )
+  );
 }
