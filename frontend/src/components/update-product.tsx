@@ -3,16 +3,23 @@ import Download from '../assets/download.svg'
 import X from '../assets/x.svg'
 import Plus from '../assets/plus2.svg'
 import arrowDown from '../assets/arrow-down.svg'
+import { useNavigate } from 'react-router-dom'
 
 export function UpdateProduct() {
+    const navigate = useNavigate();
+
+    function backPage() {
+        navigate(-1);
+    }
+
     return (
         <div className='flex'>
             <div className="flex flex-col justify-center items-start gap-7 mt-32 lg:mt-[180px] mx-auto">
                 <div className='px-8 lg:px-0 space-y-5'>
-                    <a href='' className='flex items-center'>
+                    <button onClick={backPage} className='flex items-center'>
                         <img className='w-8 h-8' src={Back} alt="back" />
                         <p className='font-bold font-poppins text-light-300 text-2xl'>voltar</p>
-                    </a>
+                    </button>
 
                     <h1 className='font-poppins text-[32px] text-light-300'>Editar prato</h1>
                 </div>

@@ -1,15 +1,22 @@
+import { useNavigate } from 'react-router-dom';
 import Back from '../assets/back.svg'
 import Produto from '../assets/Mask group-3.png'
 
 export function ShowProduct() {
+    const navigate = useNavigate();
+
+    function backPage() {
+        navigate(-1);
+    }	
+
     return (
         <div>
             <div className="flex flex-col justify-center items-start max-w-[1220px] gap-7 mt-[130px] lg:mt-[180px] mx-auto px-14 md:px-32 lg:px-0">
                 <div className='space-y-4'>
-                    <a href='' className='flex items-center'>
+                    <button onClick={backPage} className='flex items-center'>
                         <img className='w-8 h-8' src={Back} alt="back" />
                         <p className='font-bold font-poppins text-light-300 text-2xl'>voltar</p>
-                    </a>
+                    </button>
                 </div>
                 <div className='flex justify-center fle-col flex-wrap lg:flex-nowrap gap-x-10 gap-y-4'>
                     <img className='h-64 w-64 md:h-80 md:w-80 lg:h-[400px] lg:w-[400px]' src={Produto} alt="produto" />

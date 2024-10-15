@@ -8,14 +8,16 @@ import { useState } from 'react';
 
 export function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [isAnimating, setIsAnimating] = useState(false); 
+    const [isAnimating, setIsAnimating] = useState(false);
+
+    const isAdmin = true;
 
     const toggleModal = () => {
         if (isModalOpen) {
             setIsAnimating(false);
             setTimeout(() => setIsModalOpen(false), 300);
         } else {
-            setIsModalOpen(true); 
+            setIsModalOpen(true);
             setTimeout(() => setIsAnimating(true), 10);
         }
     };
@@ -28,9 +30,14 @@ export function Header() {
                 </div>
 
                 <div className='flex justify-center items-center gap-8 flex-1'>
-                    <div className='flex items-center'>
-                        <img className='h-6 w-6 lg:h-8 lg:w-8 mr-3' src={Logo} alt="logo" />
-                        <h1 className='text-light-100 text-xl lg:text-2xl font-bold text-nowrap'>Food Explorer</h1>
+                    <div className='flex flex-col flex-end'>
+                        <a href='/' className='flex items-center'>
+                            <img className='h-6 w-6 lg:h-8 lg:w-8 mr-3' src={Logo} alt="logo" />
+                            <h1 className='text-light-100 text-xl lg:text-2xl font-bold text-nowrap'>Food Explorer</h1>
+                        </a>
+                        {isAdmin && (
+                            <span className='-mt-2 ml-auto text-[12px] text-cake-200'>admin</span>
+                        )}
                     </div>
                     <div className='hidden flex-1 md:flex bg-dark-900 py-3 px-4 min-w-[200px] rounded-md gap-2'>
                         <img className='text-light-400' src={Search} alt="" />
@@ -38,13 +45,20 @@ export function Header() {
                     </div>
                 </div>
 
-                <a href='' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200'>
-                    <img className='text-light-100' src={Pedido} alt="logo-pedido" />
-                    <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
-                    <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>
-                        <span>1</span>
-                    </div>
-                </a>
+                {isAdmin ? (
+                    <a href='/new-product' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200'>
+                        <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Novo produto</p>
+                    </a>
+                ) : (
+                    <a href='' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200'>
+                        <img className='text-light-100' src={Pedido} alt="logo-pedido" />
+                        <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
+                        <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>
+                            <span>1</span>
+                        </div>
+                    </a>
+                )}
+
 
                 <button className='hidden lg:block'>
                     <img className='text-light-700' src={Logout} alt="logo-logout" />
