@@ -4,9 +4,9 @@ import { Header } from "./components/header";
 
 export function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <main>
+      <main className="flex-grow">
         <Outlet /> {/* Conteúdo dinâmico das rotas será renderizado aqui */}
       </main>
       <Footer />
