@@ -1,13 +1,17 @@
 import { useNavigate } from 'react-router-dom';
 import Back from '../assets/back.svg'
 import Produto from '../assets/Mask group-3.png'
+import Minus from '../assets/minus.svg'
+import Plus from '../assets/plus.svg'
+import iconPedido from '../assets/pedido.svg'
 
 export function ShowProduct() {
     const navigate = useNavigate();
+    const isAdmin = false;
 
     function backPage() {
         navigate(-1);
-    }	
+    }
 
     return (
         <div>
@@ -31,9 +35,42 @@ export function ShowProduct() {
                             <p className='bg-dark-1000 py-1 px-2 rounded-md'>rabanete</p>
                             <p className='bg-dark-1000 py-1 px-2 rounded-md'>tomate</p>
                         </div>
-                        <a href="" className='w-full bg-tomato-100 hover:bg-tomato-200 lg:w-32 h-12 mt-4 rounded-md flex justify-center items-center font-poppins'>
-                            Editar Prato
-                        </a>
+                        {!isAdmin ? (
+                            <div className="flex items-center gap-4 lg:gap-8 mt-4 w-full">
+                                <div className="flex items-center gap-4">
+                                    <button>
+                                        <img
+                                            className="w-7 h-7 object-cover flex-shrink-0"
+                                            src={Minus}
+                                            alt="icon minus"
+                                        />
+                                    </button>
+                                    <p className="font-bold text-[22px]">01</p>
+                                    <button>
+                                        <img
+                                            className="w-7 h-7 object-cover flex-shrink-0"
+                                            src={Plus}
+                                            alt="icon plus"
+                                        />
+                                    </button>
+                                </div>
+                                <div className="flex-grow">
+                                    <button
+                                        type="button"
+                                        className="w-full bg-tomato-100 hover:bg-tomato-200 h-12 rounded-md flex justify-center items-center px-6 gap-1.5 font-poppins lg:w-auto"
+                                    >
+                                        <img className='w-4 h-4 sm:h-5 sm:w-5' src={iconPedido} alt="icon pedido" />
+                                        <span className='text-[10px] sm:text-[14px] '>pedir &bull; R$ 25,00</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        ) : (
+                            <a href="/update-product" className='w-full bg-tomato-100 hover:bg-tomato-200 lg:w-32 h-12 mt-4 rounded-md flex justify-center items-center font-poppins'>
+                                Editar Prato
+                            </a>
+                        )}
+
                     </div>
                 </div>
             </div>
