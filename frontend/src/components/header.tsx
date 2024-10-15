@@ -12,7 +12,7 @@ export function Header() {
     const [isAnimating, setIsAnimating] = useState(false);
 
     const navigate = useNavigate();
-    const isAdmin = true;
+    const isAdmin = false;
 
     const toggleModal = () => {
         if (isModalOpen) {

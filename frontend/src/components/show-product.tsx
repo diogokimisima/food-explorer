@@ -7,7 +7,7 @@ import iconPedido from '../assets/pedido.svg'
 
 export function ShowProduct() {
     const navigate = useNavigate();
-    const isAdmin = true;
+    const isAdmin = false;
 
     function backPage() {
         navigate(-1);

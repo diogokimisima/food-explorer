@@ -4,7 +4,7 @@ import { ProductCard } from '../components/product-card'; // Ajuste o caminho de
 import { products } from '../data/'; // Ajuste o caminho de importação
 
 export function Home() {
-    const isAdmin = true;
+    const isAdmin = false;
 
     return (
         <div>
