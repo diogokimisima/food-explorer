@@ -11,6 +11,7 @@ import { ShowProduct } from "./components/show-product";
 import { UpdateProduct } from "./components/update-product";
 import './global.css';
 import { Order } from "./components/order";
+import { Favorites } from "./components/favorites";
 
 const isAuthenticated = true;
 
@@ -25,6 +26,7 @@ const routes = createBrowserRouter([
           { path: "show-product", element: <ShowProduct /> },
           { path: "update-product", element: <UpdateProduct /> },
           { path: "order", element: <Order /> },
+          { path: "favorites", element: <Favorites /> },
           { path: "*", element: <Navigate to="/" replace /> },
         ]
       : [

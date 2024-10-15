@@ -52,7 +52,7 @@ export function Header() {
                 ) : (
                     <a href='/order' className='relative lg:flex lg:bg-tomato-100 gap-2 py-3 lg:px-11 rounded-md lg:hover:bg-tomato-200'>
                         <img className='text-light-100' src={Pedido} alt="logo-pedido" />
-                        <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
+                        <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (4)</p>
                         <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>
                             <span>4</span>
                         </div>
@@ -85,6 +85,11 @@ export function Header() {
                                 {isAdmin && (
                                     <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
                                         <a href='/new-product' className='px-2.5 text-2xl font-poppins'>Novo prato</a>
+                                    </div>
+                                )}
+                                {!isAdmin && (
+                                    <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
+                                        <a href='/favorites' className='px-2.5 text-2xl font-poppins'>Favoritos</a>
                                     </div>
                                 )}
                                 <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
