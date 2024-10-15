@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Back from '../assets/back.svg'
 import Produto from '../assets/Mask group-3.png'
 import Minus from '../assets/minus.svg'
@@ -7,7 +7,7 @@ import iconPedido from '../assets/pedido.svg'
 
 export function ShowProduct() {
     const navigate = useNavigate();
-    const isAdmin = false;
+    const isAdmin = true;
 
     function backPage() {
         navigate(-1);
@@ -66,9 +66,9 @@ export function ShowProduct() {
                             </div>
 
                         ) : (
-                            <a href="/update-product" className='w-full bg-tomato-100 hover:bg-tomato-200 lg:w-32 h-12 mt-4 rounded-md flex justify-center items-center font-poppins'>
+                            <Link to="/update-product" className='w-full bg-tomato-100 hover:bg-tomato-200 lg:w-32 h-12 mt-4 rounded-md flex justify-center items-center font-poppins'>
                                 Editar Prato
-                            </a>
+                            </Link>
                         )}
 
                     </div>

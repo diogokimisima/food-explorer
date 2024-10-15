@@ -4,7 +4,7 @@ import { ProductCard } from '../components/product-card'; // Ajuste o caminho de
 import { products } from '../data/'; // Ajuste o caminho de importação
 
 export function Home() {
-    const isAdmin = false;
+    const isAdmin = true;
 
     return (
         <div>
@@ -23,7 +23,7 @@ export function Home() {
                 <div className='max-w-[1220px] w-full text-left'>
                     <h3 className='text-light-300 font-poppins text-lg sm:text-3xl'>Refeições</h3>
                 </div>
-                <div className='flex max-w-[1220px]  gap-7 w-full overflow-x-auto pr-6 sm:pr-0'>
+                <div className='flex max-w-[1220px]  gap-7 w-full overflow-x-auto pr-6 sm:pr-0 hide-scrollbar'>
                     {products.map((product, index) => (
                         <ProductCard
                             key={index}

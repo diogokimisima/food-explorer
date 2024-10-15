@@ -2,6 +2,7 @@ import Logo from '../assets/explorer.svg'
 import Eye from '../assets/eye.svg'
 import EyeOff from '../assets/eye-off.svg'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export function SignIn() {
     const [showPassword, setShowPassword] = useState(false);
@@ -46,7 +47,7 @@ export function SignIn() {
                         </div>
                     </div>
                     <button className="bg-tomato-100 hover:bg-tomato-200 text-light-100 w-full py-3 rounded-md" type="submit">Entrar</button>
-                    <a href="/signup" className="mt-8">Criar uma conta</a>
+                    <Link to="/signup" className="mt-8">Criar uma conta</Link>
                 </form>
             </div>
         </div>

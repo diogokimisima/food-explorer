@@ -6,6 +6,7 @@ import Favorite from '../assets/favorite.svg';
 import FavoriteHover from '../assets/favorite-hover.svg';
 import Edit from '../assets/edit.svg';
 import { Product } from '../data';
+import { Link, useNavigate } from 'react-router-dom';
 
 interface ProductCardProps {
     product: Product;
@@ -14,9 +15,10 @@ interface ProductCardProps {
 
 export function ProductCard({ product, isAdmin }: ProductCardProps) { 
     const [isHovered, setIsHovered] = useState(false);
+    const navigate = useNavigate();
 
     const handleContainerClick = () => {
-        window.location.href = '/show-product';
+        navigate('/show-product');
     };
 
     return (
@@ -39,9 +41,9 @@ export function ProductCard({ product, isAdmin }: ProductCardProps) {
                     </>
                 )}
                 {isAdmin ? (
-                    <a className='icon-button absolute top-4 right-5' href='/update-product'>
+                    <Link className='icon-button absolute top-4 right-5' to='/update-product'>
                         <img className='w-5 h-5 sm:w-6 sm:h-6' src={Edit} alt="icon edit" />
-                    </a>
+                    </Link>
                 ) : (
                     <button
                         className='icon-button absolute top-4 right-5'

@@ -29,3 +29,12 @@ body, input, textarea, button {
 *:hover {
     transition: all 0.2s ease;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none; /* Oculta a barra de rolagem para navegadores WebKit (Chrome, Safari) */
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;  /* Oculta a barra de rolagem para Internet Explorer e Edge */
+    scrollbar-width: none;  /* Oculta a barra de rolagem para Firefox */
+}
