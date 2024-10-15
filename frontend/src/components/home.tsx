@@ -13,14 +13,16 @@ export function Home() {
 
     const isAdmin = true;
 
-    const handleContainerClick = (event) => {
-        if (event.target.closest('.icon-button')) {
+    const handleContainerClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        if ((event.target as Element).closest('.icon-button')) {
             event.stopPropagation();
             return
         }
-
+    
         window.location.href = '/show-product';
     };
+    
+    
     
 
     return (
