@@ -2,7 +2,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
-import { App } from "./App"; // Importando o App
+import { App } from "./App";
 import { SignIn } from "./components/sign-in";
 import { SignUp } from "./components/sign-up";
 import { Home } from "./components/home";
@@ -12,27 +12,38 @@ import { UpdateProduct } from "./components/update-product";
 import './global.css';
 import { Order } from "./components/order";
 import { Favorites } from "./components/favorites";
+import { isAdmin } from "./config/auth-config";
 
 const isAuthenticated = true;
 
 const routes = createBrowserRouter([
   {
-    path: "/", 
+    path: "/",
     element: <App />,
     children: isAuthenticated
       ? [
-          { path: "/", element: <Home /> },
-          { path: "new-product", element: <NewProduct /> },
-          { path: "show-product", element: <ShowProduct /> },
-          { path: "update-product", element: <UpdateProduct /> },
-          { path: "order", element: <Order /> },
-          { path: "favorites", element: <Favorites /> },
-          { path: "*", element: <Navigate to="/" replace /> },
-        ]
+        // Rotas restritas apenas para admin
+        ...(isAdmin
+          ? [
+            { path: "new-product", element: <NewProduct /> },
+            { path: "update-product", element: <UpdateProduct /> },
+          ]
+        // Rotas restritas apenas para clientes
+          : [
+            { path: "order", element: <Order /> },
+            { path: "favorites", element: <Favorites /> },
+          ]),
+
+        // Rotas disponíveis para usuários autenticados
+        { path: "/", element: <Home /> },
+        { path: "show-product", element: <ShowProduct /> },
+        { path: "*", element: <Navigate to="/" replace /> },
+      ]
       : [
-          { path: "signup", element: <SignUp /> },
-          { path: "*", element: <SignIn /> }, 
-        ],
+        // Rotas públicas para usuários não autenticados
+        { path: "signup", element: <SignUp /> },
+        { path: "*", element: <SignIn /> },
+      ],
   },
 ]);
 

@@ -6,13 +6,13 @@ import Menu from '../assets/menu.svg';
 import X from '../assets/x.svg';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { isAdmin } from '../config/auth-config';
 
 export function Header() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isAnimating, setIsAnimating] = useState(false);
 
     const navigate = useNavigate();
-    const isAdmin = false;
 
     const toggleModal = () => {
         if (isModalOpen) {

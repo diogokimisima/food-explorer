@@ -1,11 +1,10 @@
 // src/pages/Home.tsx
 import Banner from '../assets/banner.png';
-import { ProductCard } from '../components/product-card'; // Ajuste o caminho de importação conforme necessário
-import { products } from '../data/'; // Ajuste o caminho de importação
+import { ProductCard } from '../components/product-card'; 
+import { isAdmin } from '../config/auth-config';
+import { products } from '../data/';
 
 export function Home() {
-    const isAdmin = false;
-
     return (
         <div>
             <div className='bg-gradient-100 h-28 w-80 sm:h-[170px] sm:w-[630px] md:h-[200px] md:w-[780px] lg:h-[260px] lg:w-[1030px] flex justify-center mx-auto relative mt-[150px] md:mt-[200px] lg:mt-[280px] rounded-md sm:rounded-lg '>

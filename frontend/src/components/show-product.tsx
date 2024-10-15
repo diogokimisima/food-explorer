@@ -4,10 +4,10 @@ import Produto from '../assets/Mask group-3.png'
 import Minus from '../assets/minus.svg'
 import Plus from '../assets/plus.svg'
 import iconPedido from '../assets/pedido.svg'
+import { isAdmin } from '../config/auth-config';
 
 export function ShowProduct() {
     const navigate = useNavigate();
-    const isAdmin = false;
 
     function backPage() {
         navigate(-1);
