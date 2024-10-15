@@ -1,53 +1,38 @@
-import Product from '../assets/Mask group-3.png'
+import Back from '../assets/back.svg'
+import { useNavigate } from 'react-router-dom';
+
+import { OrderCard } from './order-card'
+import { products } from '../data/';
 
 export function Order() {
+    const navigate = useNavigate();
+
+    function backPage() {
+        navigate(-1);
+    }
+
+    const total = products.reduce((acc, product) => acc + product.price, 0);
+
     return (
-        <div className='mt-[150px] px-10 space-y-10'>
+        <div className='flex flex-col items-start mx-auto max-w-[1300px] mt-[150px] px-10 space-y-10'>
+            <div className='space-y-4'>
+                <button onClick={backPage} className='flex items-center'>
+                    <img className='w-8 h-8' src={Back} alt="back" />
+                    <p className='font-bold font-poppins text-light-300 text-2xl'>voltar</p>
+                </button>
+            </div>
             <h1 className='font-poppins text-[32px]'>Meu pedido</h1>
-            <div className='space-y-7'>
-                <div className='flex items-center gap-3'>
-                    <img className='w-[72px] h-[72px]' src={Product} alt="imagem produto" />
-                    <div>
-                        <h2 className="font-poppins text-[20px]">1 x Salada Radish</h2>
-                        <button className="text-tomato-400 text-[12px]">Remover</button>
-                        <span className='text-[12px] text-light-400 ml-20'>R$ 25,97</span>
-                    </div>
-                </div>
-                <div className='flex items-center gap-3'>
-                    <img className='w-[72px] h-[72px]' src={Product} alt="imagem produto" />
-                    <div>
-                        <h2 className="font-poppins text-[20px]">1 x Salada Radish</h2>
-                        <button className="text-tomato-400 text-[12px]">Remover</button>
-                        <span className='text-[12px] text-light-400 ml-20'>R$ 25,97</span>
-                    </div>
-                </div>
-                <div className='flex items-center gap-3'>
-                    <img className='w-[72px] h-[72px]' src={Product} alt="imagem produto" />
-                    <div>
-                        <h2 className="font-poppins text-[20px]">1 x Salada Radish</h2>
-                        <button className="text-tomato-400 text-[12px]">Remover</button>
-                        <span className='text-[12px] text-light-400 ml-20'>R$ 25,97</span>
-                    </div>
-                </div>
-                <div className='flex items-center gap-3'>
-                    <img className='w-[72px] h-[72px]' src={Product} alt="imagem produto" />
-                    <div>
-                        <h2 className="font-poppins text-[20px]">1 x Salada Radish</h2>
-                        <button className="text-tomato-400 text-[12px]">Remover</button>
-                        <span className='text-[12px] text-light-400 ml-20'>R$ 25,97</span>
-                    </div>
-                </div>
-                <div className='flex items-center gap-3'>
-                    <img className='w-[72px] h-[72px]' src={Product} alt="imagem produto" />
-                    <div>
-                        <h2 className="font-poppins text-[20px]">1 x Salada Radish</h2>
-                        <button className="text-tomato-400 text-[12px]">Remover</button>
-                        <span className='text-[12px] text-light-400 ml-20'>R$ 25,97</span>
-                    </div>
-                </div>
+            <div className='flex flex-wrap gap-x-12 gap-y-7'>
+                {products.map((product, index) => (
+                    <OrderCard
+                        key={index}
+                        product={product}
+                    />
+                ))}
+
             </div>
 
-            <p className='font-poppins text-[20px]'>Total: R$ 103,88</p>
+            <p className='font-poppins text-[20px]'>Total: R$ {total.toFixed(2).replace('.', ',')}</p>
 
             <button className='font-poppins text-[14px] px-20 py-3 bg-tomato-200 rounded-md'>Avançar</button>
         </div>

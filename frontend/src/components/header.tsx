@@ -54,7 +54,7 @@ export function Header() {
                         <img className='text-light-100' src={Pedido} alt="logo-pedido" />
                         <p className='hidden lg:block text-light-100 text-sm font-poppins text-[14px]'>Pedidos (0)</p>
                         <div className='lg:hidden absolute top-0 -right-2 p-3 bg-tomato-100 text-light-100 rounded-full h-5 w-5 flex justify-center items-center'>
-                            <span>1</span>
+                            <span>4</span>
                         </div>
                     </a>
                 )}
