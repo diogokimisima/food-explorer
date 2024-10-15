@@ -81,8 +81,15 @@ export function Header() {
                                 <img className='text-light-400' src={Search} alt="" />
                                 <input className='placeholder:text-light-500 bg-dark-900 focus:outline-none w-full' type="text" placeholder='Busque por pratos ou ingredientes' />
                             </div>
-                            <div className='border-b border-light-300 border-opacity-20'>
-                                <p className='p-2.5 text-2xl font-poppins'>Sair</p>
+                            <div className='flex flex-col'>
+                                {isAdmin && (
+                                    <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
+                                        <a href='/new-product' className='px-2.5 text-2xl font-poppins'>Novo prato</a>
+                                    </div>
+                                )}
+                                <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
+                                    <a href='' className='px-2.5 text-2xl font-poppins'>Sair</a>
+                                </div>
                             </div>
                         </div>
                     </div>
