@@ -10,6 +10,7 @@ import { NewProduct } from "./components/new-product";
 import { ShowProduct } from "./components/show-product";
 import { UpdateProduct } from "./components/update-product";
 import './global.css';
+import { Order } from "./components/order";
 
 const isAuthenticated = true;
 
@@ -23,6 +24,7 @@ const routes = createBrowserRouter([
           { path: "new-product", element: <NewProduct /> },
           { path: "show-product", element: <ShowProduct /> },
           { path: "update-product", element: <UpdateProduct /> },
+          { path: "order", element: <Order /> },
           { path: "*", element: <Navigate to="/" replace /> },
         ]
       : [
