@@ -28,6 +28,11 @@ export function Header() {
         navigate('/favorites')
         toggleModal()
     }
+    
+    function goToNewProductPage() {
+        navigate('/new-product')
+        toggleModal()
+    }
 
     return (
         <>
@@ -91,7 +96,7 @@ export function Header() {
                             <div className='flex flex-col'>
                                 {isAdmin && (
                                     <div className='flex items-center border-b h-14 border-light-300 border-opacity-20'>
-                                        <Link to='/new-product' className='px-2.5 text-2xl font-poppins'>Novo prato</Link>
+                                        <button onClick={goToNewProductPage} className='px-2.5 text-2xl font-poppins'>Novo prato</button>
                                     </div>
                                 )}
                                 {!isAdmin && (
